@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martin Productions — Joe R Martin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:      #0D1F5C;
+      --gold:      #F5A623;
+      --warmwhite: #FAFAF7;
+      --steel:     #4F78B8;
+      --bluemist:  #D6E4F0;
+      --darkgray:  #4B5563;
+      --midgray:   #6B7280;
+      --gridgray:  #D9E1EA;
+      --white:     #FFFFFF;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--warmwhite); color: var(--navy); overflow-x: hidden; min-height: 100vh; }
+
+    /* HEADER */
+    header {
+      padding: 64px 60px 48px;
+      border-bottom: 1px solid var(--gridgray);
+      background: var(--white);
+    }
+    .header-name {
+      font-family: 'Cormorant Garamond', serif; font-weight: 300;
+      font-size: clamp(2.2rem, 4vw, 3.4rem); color: var(--navy); letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    .header-sub {
+      font-family: 'DM Sans', sans-serif; font-weight: 300;
+      font-size: 0.9rem; color: var(--midgray); letter-spacing: 0.08em;
+    }
+
+    /* MAIN */
+    main { max-width: 1080px; margin: 0 auto; padding: 72px 60px 100px; }
+
+    .intro {
+      font-family: 'Cormorant Garamond', serif; font-weight: 300;
+      font-size: clamp(1.2rem, 2vw, 1.55rem); line-height: 1.8; color: var(--navy);
+      max-width: 700px; margin-bottom: 72px;
+    }
+
+    /* VENTURE GROUP */
+    .group { margin-bottom: 64px; }
+    .group-label {
+      font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold);
+      margin-bottom: 24px; padding-bottom: 12px;
+      border-bottom: 1px solid var(--gridgray);
+    }
+
+    /* VENTURE CARD */
+    .venture {
+      display: grid; grid-template-columns: 220px 1fr; gap: 0;
+      border: 1px solid var(--gridgray); background: var(--white);
+      margin-bottom: 16px; transition: border-color 0.2s;
+    }
+    .venture:hover { border-color: var(--bluemist); }
+    .venture-identity {
+      padding: 32px 28px; border-right: 1px solid var(--gridgray);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .venture-name {
+      font-family: 'DM Sans', sans-serif; font-weight: 500;
+      font-size: 1rem; color: var(--navy); margin-bottom: 6px;
+    }
+    .venture-domain {
+      font-family: 'DM Sans', sans-serif; font-weight: 300;
+      font-size: 0.78rem; color: var(--steel); letter-spacing: 0.04em;
+    }
+    .venture-domain a { color: var(--steel); text-decoration: none; }
+    .venture-domain a:hover { text-decoration: underline; }
+    .venture-body {
+      padding: 32px 36px; display: flex; flex-direction: column; justify-content: center;
+    }
+    .venture-desc {
+      font-family: 'DM Sans', sans-serif; font-weight: 300;
+      font-size: 0.92rem; color: var(--darkgray); line-height: 1.75;
+      margin-bottom: 10px;
+    }
+    .venture-status {
+      display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+      font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 4px 10px; border: 1px solid var(--gridgray); color: var(--midgray);
+    }
+    .venture-status.active { border-color: var(--gold); color: var(--gold); }
+    .venture-status.soon { border-color: var(--bluemist); color: var(--steel); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--gridgray); padding: 32px 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px; background: var(--white);
+    }
+    .footer-copy { font-size: 0.78rem; font-weight: 300; color: var(--midgray); }
+    .footer-contact { font-size: 0.78rem; font-weight: 300; color: var(--midgray); }
+    .footer-contact a { color: var(--steel); text-decoration: none; }
+    .footer-contact a:hover { text-decoration: underline; }
+
+    @media (max-width: 700px) {
+      header { padding: 40px 24px 32px; }
+      main { padding: 48px 24px 72px; }
+      .venture { grid-template-columns: 1fr; }
+      .venture-identity { border-right: none; border-bottom: 1px solid var(--gridgray); padding: 24px; }
+      .venture-body { padding: 24px; }
+      footer { padding: 28px 24px; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="header-name">Joe R Martin</h1>
+  <p class="header-sub">Houston, Texas &nbsp;·&nbsp; Founder &nbsp;·&nbsp; martinproductions.com</p>
+</header>
+
+<main>
+
+  <p class="intro">
+    A portfolio of ventures built on the conviction that the next thirty years belong to those who build the infrastructure — not the applications that run on top of it.
+  </p>
+
+  <!-- GROUP 1: AI & MEMORY -->
+  <div class="group">
+    <div class="group-label">AI &amp; Memory Infrastructure</div>
+
+    <div class="venture">
+      <div class="venture-identity">
+        <div class="venture-name">AuriOS™ &amp; Auri™</div>
+        <div class="venture-domain"><a href="https://aurios.io" target="_blank" rel="noopener">aurios.io</a></div>
+      </div>
+      <div class="venture-body">
+        <p class="venture-desc">The Intelligence Superhighway™. A permanent, member-owned AI memory layer that knows you completely — and draws on every major AI in the world simultaneously. Your AI Is YOU™.</p>
+        <span class="venture-status active">Live — Request Access</span>
+      </div>
+    </div>
+
+    <div class="venture">
+      <div class="venture-identity">
+        <div class="venture-name">Custos Aurium™</div>
+        <div class="venture-domain"><a href="https://yourai.host" target="_blank" rel="noopener">yourai.host</a></div>
+      </div>
+      <div class="venture-body">
+        <p class="venture-desc">The Memory Entity. A non-profit, democratically governed organization that holds member memory rights in perpetuity. One member, one vote. AuriOS™ is the operator — Custos Aurium™ is the guardian.</p>
+        <span class="venture-status soon">Coming Soon</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- GROUP 2: REAL ESTATE & INFRASTRUCTURE -->
+  <div class="group">
+    <div class="group-label">Real Estate &amp; Hospitality</div>
+
+    <div class="venture">
+      <div class="venture-identity">
+        <div class="venture-name">Cumulus Fields</div>
+        <div class="venture-domain">cumulusfields.com</div>
+      </div>
+      <div class="venture-body">
+        <p class="venture-desc">Placeholder — description coming soon.</p>
+        <span class="venture-status soon">Coming Soon</span>
+      </div>
+    </div>
+
+    <div class="venture">
+      <div class="venture-identity">
+        <div class="venture-name">eCitySuites</div>
+        <div class="venture-domain"><a href="https://ecitysuites.com" target="_blank" rel="noopener">ecitysuites.com</a></div>
+      </div>
+      <div class="venture-body">
+        <p class="venture-desc">Placeholder — description coming soon.</p>
+        <span class="venture-status soon">Coming Soon</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- GROUP 3: INTERNET & NETWORKING -->
+  <div class="group">
+    <div class="group-label">Internet &amp; Networking</div>
+
+    <div class="venture">
+      <div class="venture-identity">
+        <div class="venture-name">PDQ.net</div>
+        <div class="venture-domain">pdq.net</div>
+      </div>
+      <div class="venture-body">
+        <p class="venture-desc">Placeholder — description coming soon.</p>
+        <span class="venture-status soon">Coming Soon</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- GROUP 4: TECHNOLOGY & SIMULATION -->
+  <div class="group">
+    <div class="group-label">Technology &amp; Simulation</div>
+
+    <div class="venture">
+      <div class="venture-identity">
+        <div class="venture-name">CyberSim</div>
+        <div class="venture-domain"><a href="https://cybersim.com" target="_blank" rel="noopener">cybersim.com</a></div>
+      </div>
+      <div class="venture-body">
+        <p class="venture-desc">Placeholder — description coming soon.</p>
+        <span class="venture-status soon">Coming Soon</span>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-copy">© 2026 Martin Productions · Houston, Texas</div>
+  <div class="footer-contact"><a href="mailto:joe@martinproductions.com">joe@martinproductions.com</a></div>
+</footer>
+
+</body>
+</html>
