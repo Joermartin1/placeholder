@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon — AuriOS™</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0D1F5C;
+      --gold:  #F5A623;
+      --gray:  #6B7280;
+      --bg:    #FAFAF7;
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--navy);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .logo-mark {
+      width: 64px; height: 64px;
+      margin: 0 auto 32px;
+    }
+    .logo-mark svg { width: 100%; height: 100%; }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    h1 em { font-style: italic; color: var(--gold); }
+    p {
+      font-weight: 300;
+      font-size: 1rem;
+      color: var(--gray);
+      max-width: 400px;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+    .rule {
+      width: 40px; height: 2px;
+      background: var(--gold);
+      margin: 0 auto 48px;
+    }
+    .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+    }
+    footer {
+      position: fixed;
+      bottom: 24px;
+      font-size: 0.72rem;
+      color: var(--gray);
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-mark">
+    <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="28" cy="28" r="27" fill="#D6E4F0" opacity="0.6"/>
+      <circle cx="28" cy="28" r="20" fill="#4F78B8"/>
+      <circle cx="28" cy="28" r="13" fill="#0D1F5C"/>
+      <circle cx="28" cy="28" r="4.5" fill="#F5A623"/>
+    </svg>
+  </div>
+  <h1>Something is<br><em>coming.</em></h1>
+  <div class="rule"></div>
+  <p>This domain is part of the AuriOS™ ecosystem.<br>Check back soon.</p>
+  <p class="tagline">Your AI Is YOU™</p>
+  <footer>© 2026 Martin Productions, Inc. · AuriOS™</footer>
+</body>
+</html>
